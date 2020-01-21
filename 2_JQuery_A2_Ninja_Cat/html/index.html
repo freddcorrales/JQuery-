@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ninja To Cat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1 class="assignmentTitle">Ninja To Cat</h1>
+        </div>
+        <div class="catImages">
+            <img src="../img/ninja0.png" alt="Ninja0" data-alt-src='../img/cat0.png'><br>
+            <img src="../img/ninja1.png" alt="Ninja1" data-alt-src='../img/cat1.png'><br>
+            <img src="../img/ninja2.png" alt="Ninja2" data-alt-src='../img/cat2.png'><br>
+            <img src="../img/ninja3.png" alt="Ninja3" data-alt-src='../img/cat3.png'><br>
+            <img src="../img/ninja4.png" alt="Ninja4" data-alt-src='../img/cat4.png'><br>
+            
+        </div>
+    <script>
+
+
+    $('img').click(function () {
+            $(this).fadeOut(function () {
+                var new_img = $(this).attr('src'); //the variable "new_img" is holding the value '../img/ninja0.png'
+                $(this).attr('src', $(this).attr('data-alt-src')); // the img src is now the value in data-alt-src
+                $(this).attr('data-alt-src', new_img); //data-alt-src is now the original value in src
+            });
+    
+            $(this).fadeIn(); //this tells the click img to show the new value of the img
+        })
+
+        // function () {
+        //     $(this).stop().fadeOut(function () {
+        //         var $temp = $(this).attr('altsrc');
+        //         $(this).attr('altsrc', $(this).attr('src'));
+        //         $(this).attr('src', $temp);
+        //     })
+        // };    
+
+    </script>
+    
+    </body>
+</html>

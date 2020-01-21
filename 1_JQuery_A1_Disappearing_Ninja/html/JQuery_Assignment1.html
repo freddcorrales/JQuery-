@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1 class="assignmentTitle">JQuery Assignment 1</h1>
+        </div>
+        <div class="nhlLogos">
+            <img src="../img/ducks.png" alt="Anaheim Ducks Logo">
+            <img src="../img/kings.png" alt="Los Angeles Kings Logo">
+            <img src="../img/bruins.png" alt="Boston Burins Logo"><br>
+            <img src="../img/coyotes.png" alt="Phoenix CoyotesLogo">
+            <img src="../img/dallas.png" alt="Dallas Stars Logo">
+            <img src="../img/sabres.png" alt="Buffalo Sabres Logo">
+        </div>
+
+        <div class="btn">
+            <button class="restore">Restore</button>
+        </div>
+
+        <script>
+             $( "img" ).click(function() {
+                $( this ).fadeOut( "slow", function() {
+                // Animation complete.
+                });
+            });
+
+            $( ".restore" ).click(function() {
+                $( 'img' ).fadeIn( "slow", function() {
+                // Animation complete.
+                });
+            });
+        
+        </script>
+    </body>
+</html>

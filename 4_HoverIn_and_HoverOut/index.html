@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <img src="ducks.png" alt="ducks logo" data-alt-src='mightyducks.jpg' class='ducks'>
+        <img src="kings.png" alt="kings logo" data-alt-src='oldkings.jpg' class='kings'><br>
+        <img src="dallas.png" alt="dallas logo" data-alt-src='olddallas.png' class='dallas'>
+        <img src="sabres.png" alt="sabres logo" data-alt-src='oldsabres.png' class='sabres'>
+
+
+
+
+    </body>
+    <script>
+        $('img').hover(function () {
+           
+            var ducks_img = $(this).attr('src'); //the variable "new_img" is holding the value '../img/ninja0.png'
+            $(this).attr('src', $(this).attr('data-alt-src')); // the img src is now the value in data-alt-src
+            $(this).attr('data-alt-src', ducks_img); //data-alt-src is now the original value in src
+        },
+
+            function(){
+            var ducks_img = $(this).attr('data-alt-src');
+            $(this).attr('data-alt-src', $(this).attr('src'));
+            $(this).attr('src', ducks_img)
+            
+        });
+    </script>
+</html>

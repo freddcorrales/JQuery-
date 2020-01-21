@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>jQuery Functions</h1>
+        <hr>
+        <h2>Hide Command</h2>
+            <h3 class="hide"> Hide Me</h3>
+            <button class="hideButton">Hide Button</button><br><br>
+
+        <hr>
+        
+        <h2>Show Command</h2>
+            <p>Click the button below to show hidden button above</p>
+        <button class="showButton">Show Button</button><br><br>
+
+        <hr>
+        
+        <h2 class="toggle">Toggle Command</h2>
+            <p>Click the button below to toggle the title of this section</p>
+        <button class="toggleButton">Toggle Button</button><br><br>
+        <button class="showToggleButton">Show Section Title</button><br><br>
+
+        <hr>
+        
+        <h2>Slide Up</h2>
+
+        <img id="ducks" src="duckslogo.png" alt="" width="220" height="180"><br>
+        <button id="clickme">Click here</button>
+
+        <hr>
+        
+        <h2 class="slideD">Slide Down Command</h2>
+            <p>Click the button below to show the Duck Logo Above</p>
+        <button class="slideDownButton">Slide Down Button</button><br><br>
+       
+        <hr>
+
+        <h2 class="slideT">Slide Toggle Command</h2>
+            <p>Click the button below to hide the Duck Logo Above</p>
+        <button class="slideToggleButton">Slide Toggle Button</button><br><br>
+
+        <hr>
+
+        <h2 class="fadeO">Fade Out Command</h2>
+            <p>Click the button below to hide the Duck Logo Above</p>
+        <button class="fadeOutButton">Fade Out Button</button><br><br>
+
+
+        <hr>
+
+        <h2 class="fadeI">Fade In Command</h2>
+            <p>Click the button below to show the Duck Logo Above</p>
+        <button class="fadeInButton">Fade In Button</button><br><br>
+
+
+
+        <script>
+
+            // Hide
+            $(".hideButton").click(function() {
+                $(".hide").hide();
+            });
+
+            //Show
+            $(".showButton").click(function() {
+                $(".hide").show();
+            });
+
+            //Toggle
+            $(".toggleButton").click(function() {
+                $("#ducks").toggle("slow", function(){
+
+                });
+            });
+
+            $(".showToggleButton").click(function() {
+                $(".toggle").show();
+            });
+
+            //Slide Up
+            $( "#clickme" ).click(function() {
+                $( "#ducks" ).slideUp( "slow", function() {
+                // Animation complete.
+                });
+            });
+
+            //Slide Down
+            $(".slideDownButton").click(function() {
+                $("#ducks").slideDown("slow", function(){
+
+                } );
+            });
+
+            //Slide Toggle
+
+            $( ".slideToggleButton" ).click(function() {
+                $( "#ducks" ).slideToggle( "slow", function() {
+                // Animation complete.
+                });
+            });
+
+             //Fade Out
+             $( ".fadeOutButton" ).click(function() {
+                $( "#ducks" ).fadeOut( "slow", function() {
+                // Animation complete.
+                });
+            });
+
+            //Fade In
+
+            $( ".fadeInButton" ).click(function() {
+                $( "#ducks" ).fadeIn( "slow", function() {
+                // Animation complete.
+                });
+            });
+
+            //add class
+
+            // $(".fadeI, p").addClass("hello")
+
+            //add before
+
+            // $(".hide").before("Added this with .before element")
+
+            //add after
+
+            // $(".hideButton").after("Added this with .after element")
+
+            //append
+
+            // $(".fadeI").append("Added this with .append element")
+
+            //html
+
+            // $(".fadeInButton").html("<p>hello</p>")
+
+            //.attr
+
+            $( "#ducks" ).attr({
+                alt: "Ducks Logo",
+                title: "photo test with JQuery"
+            });
+
+        </script>
+    
+    </body>
+</html>
